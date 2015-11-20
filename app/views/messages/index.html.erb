@@ -18,10 +18,15 @@
 <% end %>
 
 <%= form_for(Message.new) do |f| %>
-  名前:
-  <%= f.text_field :name %>
+  <p>
+  名前
+  <%= f.text_field :name, class:"form-control" %>
+  </p>
 
-  内容:
-  <%= f.text_field :body %>
-  <%= f.submit %>
+  <p>
+  内容
+  <%= f.text_area :body, class:"form-control", rows:6 %>
+  </p>
+  
+  <%= f.submit "送信", class: "btn btn-default btn-sm" %>
 <% end %>
